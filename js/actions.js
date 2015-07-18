@@ -14,7 +14,7 @@ var fn = {
     },
     deviceready: function(){
         
-        //document.addEventListener("deviceready", fn.init, false);
+        document.addEventListener("deviceready", fn.init, false);
     },
     estaRegistrado: function(){
         if(window.localStorage.getItem("uuid") != undefined)
