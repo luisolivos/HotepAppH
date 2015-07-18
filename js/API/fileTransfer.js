@@ -5,6 +5,8 @@ var ft = {
             navigator.notification.alert("Registrado Correctamente", function(){
                 navigator.vibrate(2000);
                 navigator.notification.beep(1);
+                window.localStorage.setItem("user", $('#regNom').val());
+                window.localStorage.setItem("uuid", dispositivo.uuid);
                 window.location.href = "#home";
                 $.mobile.loading( "hide" );
             }, "Bienvenido", "Finalizar");
@@ -18,7 +20,7 @@ var ft = {
     start: function(path){
         var options = new FileUploadOptions();
         options.fileKey = "foto";
-        options.fileName = "Carlos";
+        options.fileName = "PP";
         options.mimeType = "image/jpeg";
 
         var ft2 = new FileTransfer();

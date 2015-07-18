@@ -1,17 +1,26 @@
 //Funcionalidades principales
+//MongoDB base de datos no relacional
 var fn = {
     init: function(){
         if(!fn.estaRegistrado())
             window.location.href = "#reg";
         
         $('#reg ul[data-role = listview] a').click(mc.start);
-        $("#reg div[data-role = footer] a").click(fn.registrarClick);
+        $("#reg div[data-role = footer] a").tap(fn.registrarClick);
+        
+        $('#nr1 ul[data-role = listview] a').tap(fn.seleccionarTipo);
+        $('#nr1 div[data-role = navbar] li').tap(fn.nr1Siguiente);
+        $("#resSend").tap(fn.nr2Send);
     },
     deviceready: function(){
-        document.addEventListener("deviceready", fn.init, false);
+        
+        //document.addEventListener("deviceready", fn.init, false);
     },
     estaRegistrado: function(){
-        return false;
+        if(window.localStorage.getItem("uuid") != undefined)
+            return true;
+        else
+            return false;
     },
     registrarClick: function(){
         $.mobile.loading( "show" );
@@ -42,7 +51,37 @@ var fn = {
                 navigator.notification.alert("Error al enviar los datos", null, "Enviar Datos", "Aceptar");
             }   
         });
+    },
+    seleccionarTipo: function(){
+        $(this).parents('ul').find('a').css("background-colo","");
+        $('#nr1').attr("th", $(this).text());
+        $(this).css("background-color","#00aa00");
+        },
+    nr1Siguiente: function(){
+        if($(this).index() == 1 && $('#nr1').attr('th') != undefined)
+            window.location.href = "#nr2";
+        else{
+            alert
+            {
+                if($(this).index() != 0)
+                    alert("Es necesario seleccionar un tipo de habitación");
+            }
+        }
+    },
+    nr2Send:function(){
+        var th=$("#nr1").attr('th');
+        var pr=$("#resPer").val();
+        var ha=$("#resHab").val();
+        var di=$("#resDia").val();
+        
+        //Si esta conectado A internet, enviar reserva al servidor
+        
+        //Si no esta conectado a internet, guardar datos en el dispositivo
+
+       // alet(th + ' - ' + tr + ' - ' + pr + ' - ' + ha + ' - ' + di);
+        almacen.guardarReserva(th,pr,ha,di);
     }
+    
 };
 
 $(fn.deviceready);
