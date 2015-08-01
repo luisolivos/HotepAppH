@@ -1,27 +1,33 @@
 //Funcionalidades principales
-var fn = {
+/*var fn = {
     init: function(){
-        if(!fn.estaRegistrado())
+        alert("2");
+        if(true)
             window.location.href = "#reg";
+        else
+            window.location.href = "#home";
+        alert("3");
         
         $('#reg ul[data-role = listview] a').tap(mc.start);
         $("#reg div[data-role = footer] a").tap(fn.registrarClick);
 		$('#nr1 ul[data-role = listview] a').tap(fn.seleccionarTipo);
 		$('#nr1 div[data-role = navbar] li').tap(fn.nr1Siguiente);
 		$('#resSend').tap(fn.nr2Send);
-		document.addEventListener("online", almacen.leerReservas, false);
+		//document.addEventListener("online", almacen.leerReservas, false);
     },
     deviceready: function(){
+    //    addEventListener("load", fn.init, false);
+        alert("1");
 		document.addEventListener("deviceready", fn.init, false);
     },
     estaRegistrado: function(){
-		if(window.localStorage.getItem('uuid') != undefined)
-			return true;
-		else
+		//if(window.localStorage.getItem('uuid') != undefined)
 			return false;
+		//else
+		//	return true;
     },
     registrarClick: function(){
-        $.mobile.loading( "show" );
+      //  $.mobile.loading( "show" );
         var nom = $('#regNom').val();
         var mai = $('#regMail').val();
         var tel = $('#regTel').val();
@@ -68,12 +74,17 @@ var fn = {
 		var pr = $('#resPer').val();
 		var ha = $('#resHab').val();
 		var di = $('#resDia').val();
-		
-		if(conex.isConnected())//Detectar si está conectado a internet
+		/*
+		if(conex.isConnected())
+        {
+        }//Detectar si está conectado a internet
 			//Enviar Reservas al servidor
-		else//sino
+		else//sino  
 			almacen.guardarReserva(th,pr,ha,di);//Guardar datos en el dispositivo
+      
 	}
 };
+*/
+alert("1");
 
-$(fn.deviceready);
+//$(fn.deviceready);

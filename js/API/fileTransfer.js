@@ -6,7 +6,7 @@ var ft = {
                 navigator.vibrate(2000);
                 navigator.notification.beep(1);
                 window.localStorage.setItem('user', $('#regNom').val());
-                //window.localStorage.setItem("uuid", dispositivo.uuid);
+                window.localStorage.setItem("uuid", dispositivo.uuid);
                 window.location.href = "#home";
                 $.mobile.loading( "hide" );
             }, "Bienvenido", "Finalizar");
