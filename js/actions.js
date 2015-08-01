@@ -47,7 +47,7 @@ var fn = {
             }
         }).done(function( msg ) {
             if(msg == 1){
-                ft.start(foto);//Enviar Foto
+                //ft.start(foto);//Enviar Foto
             }else{
                 navigator.notification.alert("Error al enviar los datos", null, "Enviar Datos", "Aceptar");
             }   
@@ -72,12 +72,13 @@ var fn = {
 		var ha = $('#resHab').val();
         
 		var di = $('#resDia').val();
-		/*
+		
 		if(conex.isConnected())
         {
+            alert("Conectado.. sincronizanco con server");
         }//Detectar si está conectado a internet
 			//Enviar Reservas al servidor
-		else//sino  */
+		else//sino  
 			almacen.guardarReserva(th,pr,ha,di);//Guardar datos en el dispositivo
       
 	}
