@@ -86,6 +86,7 @@ var fn = {
     
     //enviar registro servidord
     enviarRegistroServidor: function(nom,mai,tel){
+        alert("");
         $.ajax({
             method: "POST",
             url: "http://carlos.igitsoft.com/apps/test.php",
@@ -101,7 +102,7 @@ var fn = {
                 navigator.notification.alert("Error al enviar los datos", null, "Enviar Datos", "Aceptar");
             }   
         });
-    },
+    }
 };
 
 $(fn.deviceready);
