@@ -1,12 +1,10 @@
 //Funcionalidades principales
 var fn = {
     init: function(){
-        alert("2");
         if(true)
             window.location.href = "#reg";
         else
             window.location.href = "#home";
-        alert("3");
         
         $('#reg ul[data-role = listview] a').tap(mc.start);
         $("#reg div[data-role = footer] a").tap(fn.registrarClick);
@@ -17,7 +15,6 @@ var fn = {
     },
     deviceready: function(){
     //    addEventListener("load", fn.init, false);
-        alert("1");
 		document.addEventListener("deviceready", fn.init, false);
     },
     estaRegistrado: function(){
@@ -27,7 +24,7 @@ var fn = {
 		//	return true;
     },
     registrarClick: function(){
-      //  $.mobile.loading( "show" );
+        $.mobile.loading( "show" );
         var nom = $('#regNom').val();
         var mai = $('#regMail').val();
         var tel = $('#regTel').val();
@@ -85,7 +82,5 @@ var fn = {
       
 	}
 };
-
-alert("1");
 
 $(fn.deviceready);
