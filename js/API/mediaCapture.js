@@ -12,6 +12,6 @@ var mc = {
         navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     },
     start: function(){
-        navigator.device.capture.captureImage(mc.captureSuccess, mc.captureError, {limit:2});
+        navigator.device.capture.captureImage(mc.captureSuccess, mc.captureError, {limit:1});
     }
 };
