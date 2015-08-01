@@ -1,3 +1,3 @@
 var dispositivo = {
-        uuid: device.uuid
+    mid: "00"//device.uuid
 };
