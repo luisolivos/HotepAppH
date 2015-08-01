@@ -11,7 +11,7 @@ var fn = {
 		$('#nr1 ul[data-role = listview] a').tap(fn.seleccionarTipo);
 		$('#nr1 div[data-role = navbar] li').tap(fn.nr1Siguiente);
 		$('#resSend').tap(fn.nr2Send);
-		//document.addEventListener("online", almacen.leerReservas, false);
+		document.addEventListener("online", almacen.leerReservas, false);
     },
     deviceready: function(){
     //    addEventListener("load", fn.init, false);

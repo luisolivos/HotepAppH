@@ -22,7 +22,7 @@ var almacen = {
 	},
 	confirmarReservaGuardada: function(){
 		alert("Guardado en espera de sincronización con el servidor");
-	}/*,
+	},
 	borrarReservas: function(){
 		almacen.db = window.openDatabase("hotelApp","1.0","Hotel App",200000);
 		almacen.db.transaction(almacen.deleteReservas,almacen.error,almacen.confirmarReservaEliminada);
@@ -51,5 +51,5 @@ var almacen = {
 	},
 	confirmarReservasLeidas: function(){
 		almacen.borrarReservas();
-	}*/
+	}
 };
