@@ -1,5 +1,5 @@
 //Funcionalidades principales
-/*var fn = {
+var fn = {
     init: function(){
         alert("2");
         if(true)
@@ -79,12 +79,12 @@
         {
         }//Detectar si está conectado a internet
 			//Enviar Reservas al servidor
-		else//sino  
+		else//sino  */
 			almacen.guardarReserva(th,pr,ha,di);//Guardar datos en el dispositivo
       
 	}
 };
-*/
+
 alert("1");
 
-//$(fn.deviceready);
+$(fn.deviceready);
