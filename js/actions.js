@@ -73,6 +73,7 @@ var fn = {
 		var th = $('#nr1').attr('th');
 		var pr = $('#resPer').val();
 		var ha = $('#resHab').val();
+        
 		var di = $('#resDia').val();
 		/*
 		if(conex.isConnected())
