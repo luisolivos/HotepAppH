@@ -45,6 +45,7 @@ var almacen = {
 				var ha = r.rows.item(i).ha;
 				var di = r.rows.item(i).di;
 				
+                fn.enviarRegistroServidor(th, pr,ha);
 				//Enviar reserva al servidor
 			}
 		},almacen.error);
