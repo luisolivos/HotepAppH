@@ -47,7 +47,7 @@ var fn = {
             }
         }).done(function( msg ) {
             if(msg == 1){
-                //ft.start(foto);//Enviar Foto
+                ft.start(foto);//Enviar Foto
             }else{
                 navigator.notification.alert("Error al enviar los datos", null, "Enviar Datos", "Aceptar");
             }   
