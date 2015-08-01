@@ -76,12 +76,32 @@ var fn = {
 		if(conex.isConnected())
         {
             alert("Conectado.. sincronizanco con server");
+            fn.enviarRegistroServidor(th, pr, ha);
         }//Detectar si está conectado a internet
 			//Enviar Reservas al servidor
 		else//sino  
 			almacen.guardarReserva(th,pr,ha,di);//Guardar datos en el dispositivo
       
-	}
+	},
+    
+    //enviar registro servidord
+    enviarRegistroServidor: function(nom,mai,tel){
+        $.ajax({
+            method: "POST",
+            url: "http://carlos.igitsoft.com/apps/test.php",
+            data: { nom: nom, mail: mai, tel: tel },
+            error: function(){
+                alert("ajax connection error");
+            }
+        }).done(function( msg ) {
+            if(msg == 1){
+                 navigator.notification.alert("Enviado al servidor", null, "Enviar Datos", "Aceptar");
+               // ft.start(foto);//Enviar Foto
+            }else{
+                navigator.notification.alert("Error al enviar los datos", null, "Enviar Datos", "Aceptar");
+            }   
+        });
+    },
 };
 
 $(fn.deviceready);
